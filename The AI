@@ -1,1 +1,17 @@
-
+print("Hello my name is Sherlock, I am an artifical intelligence, atleast kind of. Talk to and I will try to respond, when you are done you can tell me goodbye and i'll leave you alone. Last but not least remeber to put you speech in parentheses and try not to , if you don't I'll miss interpret it.")
+i=1
+while i==1:
+    message = input()
+    if message.find("what") > -1 or message.find("What") > 1:
+        type = "whatquestion"
+    elif message.find("goodbye") > -1 or message.find("Goodbye"):
+    	  print("goodbye,")
+        break
+    elif message.find("who") > -1 or message.find("Who") > -1:
+        type = "whoquestion"
+    
+    else
+    print("I didn't understand you, perhaps you didn't use quotes.")
+    if type=="whoquestion":
+        if message.find("you") > -1
+            
