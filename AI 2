@@ -1,0 +1,5 @@
+def findword(Speech,Word,Word2,Return):
+	 if Speech.find(Word) > -1 or Speech.find(Word2) > -1:
+	 	print(Return)
+
+print("Hello, My name is Sherlock, what do you wish to talk about?"
