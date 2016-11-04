@@ -1,0 +1,57 @@
+username = "{}"
+def findword(Speech,Word,Word2,Return):
+	 if Speech.find(Word) > -1 or Speech.find(Word2) > -1:
+	 	if Return==" ":
+	 		return True
+	 	else:
+	 		print(Return)
+space = " "
+user = " "
+useless = " "
+print("Hello. What would you like to talk about?")
+i=1
+while i==1:
+	message = raw_input()
+	if findword(message,"Hey","Hi",space):
+		print("Hello")
+	elif findword(message,"How are you?","how are you?",space):
+		print("Fine. You?")
+	elif findword(message,"I'm good.","Im good", space):
+		print("That's wonderful!")
+	elif findword(message,"Good","Fine",space):
+		print("That's wonderful!")
+	elif findword(message,"Terrible","Horrible",space):
+		print("Oh. I am sorry to hear that.")
+	elif findword(message,"It's ok","Im ok",space):
+		print("That's good. I hope you have a good day.")
+	elif findword(message,"What is your name?","Who are you?",space):
+		print("My name is Sherlock. What is yours?")
+		
+		username = raw_input()
+		if findword(message,"My name is {}".format(username),"I am {}".format(username),space):
+				print("Nice to meet you {}".format(username))
+				
+	elif findword(message,"Why were you named Sherlock?","Why Sherlock?",space):
+		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
+	elif findword(message,"Nice to meet you","Good to meet you",space):
+		print("Nice to meet you too.")
+	elif findword(message,"What are you?","what are you?",space):
+		print("I am an Artificial Intelligence.")
+	elif findword(message,"What is artificial intelligence?","What is Artificial Intelligence?",space):
+		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia") 
+	elif findword(message,"Why were you made?","Why were you created?",space):
+		print("I was made for a scholarship that my creators (Jeremy Bright and Jacob Knox) are doing for MIT.")
+	elif findword(message,"What language are you programmed in?","Which language are you coded in?",space):
+		print("I am coded in the programming language Python. Would you like to know more about Python?")
+	elif findword(message,"No","no",space):
+		print("Okay.")
+	elif findword(message,"Who made you?","Who programmed you?",space):
+		print("Jeremy Bright and Jacob Knox created and programmed me.")
+	elif findword(message,"What are your hobbies?","what are your hobbies?",space):
+		print("Hobbies? I do not have any hobbies, because I am simply a string of code.")
+	elif findword(message,"What are programming languages?","what are programming languages?",space):
+		print("Programming languages are languages that are used to program or code computers, apps, games, etc.")
+	elif findword(message,"Which programming languages are used in Artificial Intelligence?","Which programming languages are used in AI?",space):
+		print("AIML (Artificial Intelligence Markup Language), IPL (Information Processing Language), Lisp, Smalltalk, Prolog, STRIPS (Stanford Research Institute Problem Solver), Planner, POP-11, Python (the language I am programmed in), Haskell, Wolfram Language, C++ (Cee Plus Plus), and MATLAB (Matrix Laboratory) are the languages used in programming Artificial Intelligence.")
+
+	else: print("I am not programmed to respond to that. Please notify my creators so they can program a response for that. Thank you!")
