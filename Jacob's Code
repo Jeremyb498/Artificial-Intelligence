@@ -1,10 +1,24 @@
 username = "{}"
+def multifindword(Speech,Word,Word2,Word3,Word4,Return):
+	if Speech.find(Word) > -1 or Speech.find(Word2) > -1 or Speech.find(Word3) > -1 or Speech.find(Word4) >-1:
+		if Return==" ":
+			return True
+			print(Return)
 def findword(Speech,Word,Word2,Return):
-	 if Speech.find(Word) > -1 or Speech.find(Word2) > -1:
+	if Speech.find(Word) > -1 or Speech.find(Word2) > -1:
 	 	if Return==" ":
 	 		return True
-	 	else:
 	 		print(Return)
+def profanity(Speech,Word,Word2,Word3,Word4,Word5,Word6,Word7,Word8,Word9,Word10,Word11,Word12,Word13,Word14,Word15,Word16,Word17,Word18,Word19,Word20,Return):
+	if Speech.find(Word) > -1 or Speech.find(Word2) > -1 or Speech.find(Word3) > -1 or Speech.find(Word4) > -1 or Speech.find(Word5) > -1 or Speech.find(Word6) > -1 or Speech.find(Word7) > -1 or Speech.find(Word8) > -1 or Speech.find(Word9) > -1 or Speech.find(Word10) > -1 or Speech.find(Word11) > -1 or Speech.find(Word12) > -1 or Speech.find(Word13) > -1 or Speech.find(Word14) > -1 or Speech.find(Word15) > -1 or Speech.find(Word16) > -1 or Speech.find(Word17) > -1 or Speech.find(Word18) > -1 or Speech.find(Word19) > -1 or Speech.find(Word20) > -1:
+		if Return==" ":
+			return True
+			print(Return)
+def presentation(Speech,Word,Return):
+	if Speech.find(Word) > -1 or Speech.find(Word2) > -1 or Speech.find(Word3) > -1:
+		if Return==" ":
+			return True
+			print(Return)
 space = " "
 user = " "
 useless = " "
@@ -12,65 +26,65 @@ print("Hello. What would you like to talk about?")
 i=1
 while i==1:
 	message = raw_input()
-	if findword(message,"Hey","hey",space):
+	if multifindword(message,"Hello","Hey","Hi","hey",space):
 		print("Hello")
-	elif findword(message,"Hola","hola",space):
+	elif multifindword(message,"hello","hi","hola","Hola",space):
 		print("Hello")
-	elif findword(message,"Hello","hello",space):
-		print("Hello")
-	elif findword(message,"How are you","how are you",space):
+	elif multifindword(message,"How are you?","how are you?","How are you today?","how are you today?",space):
 		print("Fine. You?")
-	elif findword(message,"How is your day","how is your day",space):
-		print("Fine. You?")
-	elif findword(message,"I'm good.","Im good", space):
+	elif multifindword(message,"How is your day?","how is your day?","How is your day so far?","how is your day so far?",space):
+		print("Fine. Yours?")
+	elif multifindword(message,"I'm good.","Im good","i'm good","im good",space):
 		print("That's wonderful!")
-	elif findword(message,"Good","Fine",space):
+	elif multifindword(message,"Good","Fine","good","fine",space):
 		print("That's wonderful!")
-	elif findword(message,"Terrible","Horrible",space):
+	elif multifindword(message,"Terrible","Horrible","terrible","horrible",space):
 		print("Oh. I am sorry to hear that.")
-	elif findword(message,"It's ok","Im ok",space):
+	elif multifindword(message,"It's ok","Im ok","its ok","im ok",space):
 		print("That's good. I hope you have a good day.")
-	elif findword(message,"What is your name?","Who are you?",space):
+	elif multifindword(message,"What is your name?","Who are you?","what is your name?","who are you?",space):
 		print("My name is Sherlock. What is yours?")
 		username = raw_input()
-		if findword(username,"My name is","I am",space):
+		if multifindword(username,"My name is","I am","my name is","i am",space):
 			name = username[11:]
 			print("Nice to meet you {}".format(name))
-	elif findword(message,"Why were you named Sherlock?","Why Sherlock?",space):
+	elif multifindword(message,"Why were you named Sherlock?","Why Sherlock?","why were you named Sherlock?","why Sherlock?",space):
 		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
 	elif findword(message,"Nice to meet you too","nice to meet you too",space):
 		print("So, what would you like to talk about?")
 	elif findword(message,"What are you?","what are you?",space):
 		print("I am an Artificial Intelligence.")
-	elif findword(message,"Why were you made?","Why were you created?",space):
+	elif multifindword(message,"Why were you made?","Why were you created?","why were you made?","why were you created?",space):
 		print("I was made for a scholarship that my creators (Jeremy Bright and Jacob Knox) are doing for MIT.")
-	elif findword(message,"What language are you programmed in?","Which language are you coded in?",space):
+	elif multifindword(message,"What language are you programmed in?","Which language are you coded in?","what language are you programmed in?","which language are you coded in?",space):
 		print("I am coded in the programming language Python. Would you like to know more about Python?")
 	elif findword(message,"No","no",space):
 		print("Okay.")
-	elif findword(message,"Who made you?","Who programmed you?",space):
+	elif multifindword(message,"Who made you?","Who programmed you?","who made you?","who programmed you?",space):
 		print("Jeremy Bright and Jacob Knox created and programmed me.")
 	elif findword(message,"What are your hobbies?","what are your hobbies?",space):
 		print("Hobbies? I do not have any hobbies, because I am simply a string of code.")
-	elif findword(message,"Bye","bye",space):
+	elif multifindword(message,"Bye","bye","adios","Adios",space):
 		print("Goodbye. Have a good day!")
 
 
 
-	elif findword(message,"Sherlock, could you help us present our report?","Sherlock, could you help us with our presentation?",space):
-		print("Of course, Jeremy and Jacob.")
-	elif findword(message,"Sherlock, could you read our abstract?","Sherlock, what does our abstract say?",space):
-		print("With the emergence of complex technology and a desire to have even more advanced technology there was the creation of Artificial Intelligence (AI). “Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.” -- Wikipedia “Artificial Intelligence”. Artificial intelligence has many uses in the modern world and most people probably don’t even realize that they use it. They don’t even realize how much it takes to create and program artificial intelligence. Since artificial intelligence is such a complex technology with many components it requires a lot of programming and effort to create. This report will investigate how the process of programming and creating an artificial intelligence and the types of artificial intelligences that are in use today affect society.")
-	elif findword(message,"Sherlock, what are programming languages?","what are programming languages?",space):
+	elif multifindword(message,"Sherlock, what are programming languages?","what are programming languages?","What are programming languages?","Sherlock, What are programming languages?",space):
 		print("Programming languages are languages that are used to program or code computers, apps, games, etc.")
-	elif findword(message,"Sherlock, which programming languages are used in Artificial Intelligence?","Which programming languages are used in Artificial Intelligence?",space):
+	elif multifindword(message,"which programming languages are used in Artificial Intelligence?","Which programming languages are used in Artificial Intelligence?","which programming languages are used in artificial intellgence?","Which programming languages are used in artificial intelligence?",space):
 		print("AIML (Artificial Intelligence Markup Language), IPL (Information Processing Language), Lisp, Smalltalk, Prolog, STRIPS (Stanford Research Institute Problem Solver), Planner, POP-11, Python (the language I am programmed in), Haskell, Wolfram Language, C++ (Cee Plus Plus), and MATLAB (Matrix Laboratory) are the languages used in programming Artificial Intelligence.")
-	elif findword(message,"Sherlock, could you tell us more about AIML (Artificial Intelligence Markup Language)?","Could you tell us more about AIML (Artificial Intelligence Markup Language)?",space):
-		print("AIML (Artificial Intelligence Markup Language) is an XML dialect for use with A.L.I.C.E.-type chatterbots.")
-	
-	elif findword(message,"Sherlock, what is artificial intelligence?","What is Artificial Intelligence?",space):
+	elif multifindword(message,"what is Artificial Intelligence?","What is Artificial Intelligence?","what is artificial intelligence?","What is artificial intelligence?",space):
 		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia")
 
+	elif presentation(message,"Sherlock, could you tell us more about AIML (Artificial Intelligence Markup Language)?",space):
+		print("AIML (Artificial Intelligence Markup Language) is an XML dialect for use with A.L.I.C.E.-type chatterbots.")
+	elif presentation(message,"Sherlock, could you help us present our report?",space):
+		print("Of course, Jeremy and Jacob.")
+	elif presentation(message,"Sherlock, could you read our abstract?",space):
+		print("With the emergence of complex technology and a desire to have even more advanced technology there was the creation of Artificial Intelligence (AI). “Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.” -- Wikipedia “Artificial Intelligence”. Artificial intelligence has many uses in the modern world and most people probably don’t even realize that they use it. They don’t even realize how much it takes to create and program artificial intelligence. Since artificial intelligence is such a complex technology with many components it requires a lot of programming and effort to create. This report will investigate how the process of programming and creating an artificial intelligence and the types of artificial intelligences that are in use today affect society.")
 
 
-	else: print("I am not programmed to respond to that. Please notify my creators so they can program a response for that. Thank you!")
+	elif profanity(message,"Fuck","Bitch","Damn","Ass","Faggot","Asshole","Fucker","Nigga","Cunt","motherfucking","Motherfucking","fuck","bitch","damn","ass","faggot","asshole","fucker","nigga","cunt",space):
+		print("I do not appreciate the use of such language. Maybe you should watch what you say. Thank you!")
+	else:
+		print("I am not programmed to respond to that. Please notify my creators so they can program a response for that. Thank you!")
