@@ -12,9 +12,15 @@ print("Hello. What would you like to talk about?")
 i=1
 while i==1:
 	message = raw_input()
-	if findword(message,"Hey","Hi",space):
+	if findword(message,"Hey","hey",space):
 		print("Hello")
-	elif findword(message,"How are you?","how are you?",space):
+	elif findword(message,"Hola","hola",space):
+		print("Hello")
+	elif findword(message,"Hello","hello",space):
+		print("Hello")
+	elif findword(message,"How are you","how are you",space):
+		print("Fine. You?")
+	elif findword(message,"How is your day","how is your day",space):
 		print("Fine. You?")
 	elif findword(message,"I'm good.","Im good", space):
 		print("That's wonderful!")
@@ -26,19 +32,16 @@ while i==1:
 		print("That's good. I hope you have a good day.")
 	elif findword(message,"What is your name?","Who are you?",space):
 		print("My name is Sherlock. What is yours?")
-		
 		username = raw_input()
-		if findword(message,"My name is {}".format(username),"I am {}".format(username),space):
-				print("Nice to meet you {}".format(username))
-				
+		if findword(username,"My name is","I am",space):
+			name = username[11:]
+			print("Nice to meet you {}".format(name))
 	elif findword(message,"Why were you named Sherlock?","Why Sherlock?",space):
 		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
-	elif findword(message,"Nice to meet you","Good to meet you",space):
-		print("Nice to meet you too.")
+	elif findword(message,"Nice to meet you too","nice to meet you too",space):
+		print("So, what would you like to talk about?")
 	elif findword(message,"What are you?","what are you?",space):
 		print("I am an Artificial Intelligence.")
-	elif findword(message,"What is artificial intelligence?","What is Artificial Intelligence?",space):
-		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia") 
 	elif findword(message,"Why were you made?","Why were you created?",space):
 		print("I was made for a scholarship that my creators (Jeremy Bright and Jacob Knox) are doing for MIT.")
 	elif findword(message,"What language are you programmed in?","Which language are you coded in?",space):
@@ -49,9 +52,25 @@ while i==1:
 		print("Jeremy Bright and Jacob Knox created and programmed me.")
 	elif findword(message,"What are your hobbies?","what are your hobbies?",space):
 		print("Hobbies? I do not have any hobbies, because I am simply a string of code.")
-	elif findword(message,"What are programming languages?","what are programming languages?",space):
+	elif findword(message,"Bye","bye",space):
+		print("Goodbye. Have a good day!")
+
+
+
+	elif findword(message,"Sherlock, could you help us present our report?","Sherlock, could you help us with our presentation?",space):
+		print("Of course, Jeremy and Jacob.")
+	elif findword(message,"Sherlock, could you read our abstract?","Sherlock, what does our abstract say?",space):
+		print("With the emergence of complex technology and a desire to have even more advanced technology there was the creation of Artificial Intelligence (AI). “Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.” -- Wikipedia “Artificial Intelligence”. Artificial intelligence has many uses in the modern world and most people probably don’t even realize that they use it. They don’t even realize how much it takes to create and program artificial intelligence. Since artificial intelligence is such a complex technology with many components it requires a lot of programming and effort to create. This report will investigate how the process of programming and creating an artificial intelligence and the types of artificial intelligences that are in use today affect society.")
+	elif findword(message,"Sherlock, what are programming languages?","what are programming languages?",space):
 		print("Programming languages are languages that are used to program or code computers, apps, games, etc.")
-	elif findword(message,"Which programming languages are used in Artificial Intelligence?","Which programming languages are used in AI?",space):
+	elif findword(message,"Sherlock, which programming languages are used in Artificial Intelligence?","Which programming languages are used in Artificial Intelligence?",space):
 		print("AIML (Artificial Intelligence Markup Language), IPL (Information Processing Language), Lisp, Smalltalk, Prolog, STRIPS (Stanford Research Institute Problem Solver), Planner, POP-11, Python (the language I am programmed in), Haskell, Wolfram Language, C++ (Cee Plus Plus), and MATLAB (Matrix Laboratory) are the languages used in programming Artificial Intelligence.")
+	elif findword(message,"Sherlock, could you tell us more about AIML (Artificial Intelligence Markup Language)?","Could you tell us more about AIML (Artificial Intelligence Markup Language)?",space):
+		print("AIML (Artificial Intelligence Markup Language) is an XML dialect for use with A.L.I.C.E.-type chatterbots.")
+	
+	elif findword(message,"Sherlock, what is artificial intelligence?","What is Artificial Intelligence?",space):
+		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia")
+
+
 
 	else: print("I am not programmed to respond to that. Please notify my creators so they can program a response for that. Thank you!")
