@@ -78,6 +78,8 @@ while i==1:
 
 	elif presentation(message,"Sherlock, could you tell us more about AIML (Artificial Intelligence Markup Language)?",space):
 		print("AIML (Artificial Intelligence Markup Language) is an XML dialect for use with A.L.I.C.E.-type chatterbots.")
+	elif presentation(message,"Sherlock, could you tell us more about IPL (Information Processing Language)?",space):
+		print("IPL (Information Processing Language) was the first language developed for artificial intelligence. It includes features intended to support programs that could perform general problem solving, including: lists, associations, schemas, dynamic memory allocation, data types, recursion, associative retrieval, functions as arguments, generators (streams), and cooperative multitasking.")
 	elif presentation(message,"Sherlock, could you help us present our report?",space):
 		print("Of course, Jeremy and Jacob.")
 	elif presentation(message,"Sherlock, could you read our abstract?",space):
