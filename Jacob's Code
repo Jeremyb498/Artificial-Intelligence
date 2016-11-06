@@ -15,7 +15,7 @@ def profanity(Speech,Word,Word2,Word3,Word4,Word5,Word6,Word7,Word8,Word9,Word10
 			return True
 			print(Return)
 def presentation(Speech,Word,Return):
-	if Speech.find(Word) > -1 or Speech.find(Word2) > -1 or Speech.find(Word3) > -1:
+	if Speech.find(Word) > -1:
 		if Return==" ":
 			return True
 			print(Return)
@@ -48,17 +48,17 @@ while i==1:
 		if multifindword(username,"My name is","I am","my name is","i am",space):
 			name = username[11:]
 			print("Nice to meet you {}!".format(name))
+	elif multifindword(message,"Nice to meet you too","nice to meet you too","Nice to meet you too Sherlock","nice to meet you too Sherlock",space):
+		print("So, what would you like to talk about {}?".format(name))
 	elif multifindword(message,"Why were you named Sherlock?","Why Sherlock?","why were you named Sherlock?","why Sherlock?",space):
 		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
-	elif findword(message,"Nice to meet you too","nice to meet you too",space):
-		print("So, what would you like to talk about?")
 	elif findword(message,"What are you?","what are you?",space):
 		print("I am an Artificial Intelligence.")
 	elif multifindword(message,"Why were you made?","Why were you created?","why were you made?","why were you created?",space):
 		print("I was made for a scholarship that my creators (Jeremy Bright and Jacob Knox) are doing for MIT.")
 	elif multifindword(message,"What language are you programmed in?","Which language are you coded in?","what language are you programmed in?","which language are you coded in?",space):
 		print("I am coded in the programming language Python. Would you like to know more about Python?")
-	elif findword(message,"No","no",space):
+	elif multifindword(message,"No","no","no!","No!",space):
 		print("Okay.")
 	elif multifindword(message,"Who made you?","Who programmed you?","who made you?","who programmed you?",space):
 		print("Jeremy Bright and Jacob Knox created and programmed me.")
@@ -75,6 +75,8 @@ while i==1:
 		print("AIML (Artificial Intelligence Markup Language), IPL (Information Processing Language), Lisp, Smalltalk, Prolog, STRIPS (Stanford Research Institute Problem Solver), Planner, POP-11, Python (the language I am programmed in), Haskell, Wolfram Language, C++ (Cee Plus Plus), and MATLAB (Matrix Laboratory) are the languages used in programming Artificial Intelligence.")
 	elif multifindword(message,"what is Artificial Intelligence?","What is Artificial Intelligence?","what is artificial intelligence?","What is artificial intelligence?",space):
 		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia")
+	elif multifindword(message,"What are some examples of Artificial Intelligence?","what are some examples of Artificial Intelligence?","what are some examples of artificial intelligence?","What are some examples of artificial intelligence?",space):
+		print("Some examples of Artificial Intelligence are Siri, Cortana, Jarvis (from the Iron Man movies), parts of Google, Watson (an Artificial Intelligence that played on the game show Jeopardy), me, etc.")
 
 	elif presentation(message,"Sherlock, could you tell us more about AIML (Artificial Intelligence Markup Language)?",space):
 		print("AIML (Artificial Intelligence Markup Language) is an XML dialect for use with A.L.I.C.E.-type chatterbots.")
