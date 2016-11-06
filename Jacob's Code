@@ -47,7 +47,7 @@ while i==1:
 		username = raw_input()
 		if multifindword(username,"My name is","I am","my name is","i am",space):
 			name = username[11:]
-			print("Nice to meet you {}".format(name))
+			print("Nice to meet you {}!".format(name))
 	elif multifindword(message,"Why were you named Sherlock?","Why Sherlock?","why were you named Sherlock?","why Sherlock?",space):
 		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
 	elif findword(message,"Nice to meet you too","nice to meet you too",space):
