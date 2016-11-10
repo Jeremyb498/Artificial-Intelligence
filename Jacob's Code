@@ -35,7 +35,7 @@ while i==1:
 		print("Hello")
 	elif multifindword(message,"hello","hi","hola","Hola",space):
 		print("Hello")
-	elif multifindword(message,"How are you","how are you","How are you today","how are you today",space):
+	elif multifindword(message,"How are you?","how are you?","How are you today?","how are you today?",space):
 		print("Fine. You?")
 	elif multifindword(message,"How is your day?","how is your day?","How is your day so far?","how is your day so far?",space):
 		print("Fine. Yours?")
@@ -53,6 +53,9 @@ while i==1:
 		if multifindword(username,"My name is","I am","my name is","i am",space):
 			name = username[11:]
 			print("Nice to meet you {}!".format(name))
+		elif findword(username,"What is my name?","what is my name?",space):
+			name = username[11:]
+			print("Your name is {}.".format(name))
 	elif multifindword(message,"Why were you named Sherlock?","Why Sherlock?","why were you named Sherlock?","why Sherlock?",space):
 		print("I was named Sherlock, because my creators thought it would be clever since there is another Artificial Intelligence named Watson.")
 	elif findword(message,"Nice to meet you too","nice to meet you too",space):
@@ -70,28 +73,64 @@ while i==1:
 	elif findword(message,"What are your hobbies?","what are your hobbies?",space):
 		print("Hobbies? I do not have any hobbies, because I am simply a string of code.")
 	elif findword(message,"Interesting","interesting",space):
-		print("Indeed.")
-	elif findword(message,"What are the kingdoms in science?","what are the kingdoms in science?",space):
+		print("Indeed. Is there anything else you would like to talk about?")
+	elif multifindword(message,"what are the kingdoms?","What are the kingdoms?","What are the kingdoms in science?","what are the kingdoms in science?",space):
+		print("There are six kingdoms in the scientific world: Plants, Animals, Archaebacteria, Eubacteria, Fungi, and Protists. Would you like to know more about one of these kingdoms?")
+	elif multifindword(message,"what are the six kingdoms?","What are the six kingdoms?","what are the six kingdoms in science?","What are the six kingdoms in science?",space):
 		print("There are six kingdoms in the scientific world: Plants, Animals, Archaebacteria, Eubacteria, Fungi, and Protists. Would you like to know more about one of these kingdoms?")
 	elif multifindword(message,"Yes. Animals.","yes. animals.","yes. Animals.","Yes. animals.",space):
 		print("The animal kingdom is the largest kingdom with over 1 million known species. All animals consist of many complex cells. They are also heterotrophs. Members of the animal kingdom are found in the most diverse environments in the world.")
+	elif multifindword(message,"yes, animals.","Yes, animals.","Yes. animals","yes. Animals",space):
+		print("The animal kingdom is the largest kingdom with over 1 million known species. All animals consist of many complex cells. They are also heterotrophs. Members of the animal kingdom are found in the most diverse environments in the world.")
+	elif findword(message,"yes, animals","Yes, animals",space):
+		print("The animal kingdom is the largest kingdom with over 1 million known species. All animals consist of many complex cells. They are also heterotrophs. Members of the animal kingdom are found in the most diverse environments in the world.")
 	elif multifindword(message,"Yes. Plants.","yes. plants.","Yes. plants","yes.Plants",space):
 		print("You are probably quite familiar with the members of this kingdom as it contains all the plants that you have come to know - flowering plants, mosses, and ferns. Plants are all multicellular and consist of complex cells. With over 250,000 species, the plant kingdom is the second largest kingdom. Plant species range from the tiny green mosses to giant trees. In addition plants are autotrophs, organisms that make their own food. Without plants, life on Earth would not exist!  Plants feed almost all the heterotrophs (organisms that eat other organisms) on Earth.")
+	elif multifindword(message,"yes, plants.","Yes, plants.","Yes. plants","yes. Plants",space):
+		print("You are probably quite familiar with the members of this kingdom as it contains all the plants that you have come to know - flowering plants, mosses, and ferns. Plants are all multicellular and consist of complex cells. With over 250,000 species, the plant kingdom is the second largest kingdom. Plant species range from the tiny green mosses to giant trees. In addition plants are autotrophs, organisms that make their own food. Without plants, life on Earth would not exist!  Plants feed almost all the heterotrophs (organisms that eat other organisms) on Earth.")
+	elif findword(message,"yes, plants","Yes, plants",space):
+		print("You are probably quite familiar with the members of this kingdom as it contains all the plants that you have come to know - flowering plants, mosses, and ferns. Plants are all multicellular and consist of complex cells. With over 250,000 species, the plant kingdom is the second largest kingdom. Plant species range from the tiny green mosses to giant trees. In addition plants are autotrophs, organisms that make their own food. Without plants, life on Earth would not exist!  Plants feed almost all the heterotrophs (organisms that eat other organisms) on Earth.")
 	elif multifindword(message,"Yes. Archaebacteria.","yes. archaebacteria.","Yes. archaebacteria.","yes. Archaebacteria.",space):
-		print("In 1983, scientists tool samples from a spot deep in the Pacific Ocean where hot gases and molten rock boiled into the ocean form the Earth’s interior.  To their surprise they discovered unicellular (one cell) organisms in the samples. These organisms are today classified in the kingdom, Archaebacteria. Archaebacteria are found in extreme environments such as hot boiling water and thermal vents under conditions with no oxygen or highly acid environments.")
+		print("In 1983, scientists took samples from a spot deep in the Pacific Ocean where hot gases and molten rock boiled into the ocean from the Earth’s interior.  To their surprise they discovered unicellular (one cell) organisms in the samples. These organisms are today classified in the kingdom, Archaebacteria. Archaebacteria are found in extreme environments such as hot boiling water and thermal vents under conditions with no oxygen or highly acid environments.")
+	elif multifindword(message,"yes, archaebacteria.","Yes, archaebacteria.","Yes. archaebacteria","yes. Archaebacteria",space):
+		print("In 1983, scientists took samples from a spot deep in the Pacific Ocean where hot gases and molten rock boiled into the ocean from the Earth’s interior.  To their surprise they discovered unicellular (one cell) organisms in the samples. These organisms are today classified in the kingdom, Archaebacteria. Archaebacteria are found in extreme environments such as hot boiling water and thermal vents under conditions with no oxygen or highly acid environments.")
+	elif findword(message,"yes, archaebacteria","Yes, archaebacteria",space):
+		print("In 1983, scientists took samples from a spot deep in the Pacific Ocean where hot gases and molten rock boiled into the ocean from the Earth’s interior.  To their surprise they discovered unicellular (one cell) organisms in the samples. These organisms are today classified in the kingdom, Archaebacteria. Archaebacteria are found in extreme environments such as hot boiling water and thermal vents under conditions with no oxygen or highly acid environments.")
 	elif multifindword(message,"Yes. Eubacteria.","yes. eubacteria.","Yes. eubacteria.","yes. Eubacteria.",space):
-		print("Like archaebacteria, eubacteria are complex and single celled.  Most bacteria are in the EUBACTERIA kingdom. They are the kinds found everywhere and are the ones people are most familiar with. Eubacteria are classified in their own kingdom because their chemical makeup is different. Most eubacteria are helpful.  Some produce vitamins and foods like yogurt.  However, these eubacteria, Streptococci pictured above, can give you strep throat!")
+		print("Like archaebacteria, eubacteria are complex and single celled.  Most bacteria are in the eubacteria kingdom. They are the kinds found everywhere and are the ones people are most familiar with. Eubacteria are classified in their own kingdom because their chemical makeup is different. Most eubacteria are helpful.  Some produce vitamins and foods like yogurt.  However, these eubacteria, Streptococci pictured above, can give you strep throat!")
+	elif multifindword(message,"yes, eubacteria.","Yes, eubacteria.","Yes. eubacteria","yes. Eubacteria",space):
+		print("Like archaebacteria, eubacteria are complex and single celled.  Most bacteria are in the eubacteria kingdom. They are the kinds found everywhere and are the ones people are most familiar with. Eubacteria are classified in their own kingdom because their chemical makeup is different. Most eubacteria are helpful.  Some produce vitamins and foods like yogurt.  However, these eubacteria, Streptococci pictured above, can give you strep throat!")
+	elif findword(message,"yes, eubacteria","Yes, eubacteria",space):
+		print("Like archaebacteria, eubacteria are complex and single celled.  Most bacteria are in the eubacteria kingdom. They are the kinds found everywhere and are the ones people are most familiar with. Eubacteria are classified in their own kingdom because their chemical makeup is different. Most eubacteria are helpful.  Some produce vitamins and foods like yogurt.  However, these eubacteria, Streptococci pictured above, can give you strep throat!")
 	elif multifindword(message,"Yes. Fungi.","yes. fungi.","Yes. fungi.","yes. Fungi.",space):
+		print("Mushrooms, mold and mildew are all examples of organisms in the kingdom fungi. Most fungi are multicellular and consists of many complex cells. Fungi are organisms that biologists once confused with plants, however, unlike plants, fungi cannot make their own food. Most obtain their food from parts of plants that are decaying in the soil.")
+	elif multifindword(message,"yes, fungi.","Yes, fungi.","Yes. fungi","yes. Fungi",space):
+		print("Mushrooms, mold and mildew are all examples of organisms in the kingdom fungi. Most fungi are multicellular and consists of many complex cells. Fungi are organisms that biologists once confused with plants, however, unlike plants, fungi cannot make their own food. Most obtain their food from parts of plants that are decaying in the soil.")
+	elif findword(message,"yes, fungi","Yes, fungi",space):
 		print("Mushrooms, mold and mildew are all examples of organisms in the kingdom fungi. Most fungi are multicellular and consists of many complex cells. Fungi are organisms that biologists once confused with plants, however, unlike plants, fungi cannot make their own food. Most obtain their food from parts of plants that are decaying in the soil.")
 	elif multifindword(message,"Yes. Protists.","yes. protists.","Yes. protists.","yes. Protists.",space):
 		print("Slime molds and algae are protists. Sometimes they are called the odds and ends kingdom because its members are so different from one another.  Protists include all microscopic organisms that are not bacteria, not animals, not plants and not fungi. Most protists are unicellular. You may be wondering why those protists are not classified in the Archaebacteria or Eubacteria kingdoms. It is because, unlike bacteria, protists are complex cells.")
+	elif multifindword(message,"yes, protists.","Yes, protists.","Yes. protists","yes. Protists",space):
+		print("Slime molds and algae are protists. Sometimes they are called the odds and ends kingdom because its members are so different from one another.  Protists include all microscopic organisms that are not bacteria, not animals, not plants and not fungi. Most protists are unicellular. You may be wondering why those protists are not classified in the Archaebacteria or Eubacteria kingdoms. It is because, unlike bacteria, protists are complex cells.")
+	elif findword(message,"yes, protists","Yes, protists",space):
+		print("Slime molds and algae are protists. Sometimes they are called the odds and ends kingdom because its members are so different from one another.  Protists include all microscopic organisms that are not bacteria, not animals, not plants and not fungi. Most protists are unicellular. You may be wondering why those protists are not classified in the Archaebacteria or Eubacteria kingdoms. It is because, unlike bacteria, protists are complex cells.")
+	elif findword(message,"How are you talking?","how are you talking?",space):
+		print("I am talking through a complex string of code with knowledge and outputs that my creators compiled and programmed into me. I am simply a string of code programmed to generate a response (or output) for what you say (or input).")
+	elif multifindword(message,"What would you like to talk about?","what would you like to talk about?","what do you wanna talk about?","What do you wanna talk about?",space):
+		print("There isn't anything I would necessarily like to talk about. Is there anything you would like to talk about?")
+	elif multifindword(message,"Oh. Ok.","Oh ok","oh ok","Oh. ok.",space):
+		print("Is it clarified now?")
+	elif multifindword(message,"Oh. ok","oh. ok","oh. ok.","oh, ok",space):
+		print("Is it clarified now?")
+	elif findword(message,"Yes","yes",space):
+		print("Good!")
 	elif multifindword(message,"Bye","bye","adios","Adios",space):
 		print("Goodbye. Have a good day!")
 
 
 	elif multifindword(message,"Sherlock, what are programming languages?","what are programming languages?","What are programming languages?","Sherlock, What are programming languages?",space):
 		print("Programming languages are languages that are used to program or code computers, apps, games, etc.")
-	elif multifindword(message,"which programming languages are used in Artificial Intelligence?","Which programming languages are used in Artificial Intelligence?","which programming languages are used in artificial intellgence?","Which programming languages are used in artificial intelligence?",space):
+	elif multifindword(message,"which programming languages are used in Artificial Intelligence?","Which programming languages are used in Artificial Intelligence?","which programming languages are used in artificial intelligence?","Which programming languages are used in artificial intelligence?",space):
 		print("AIML (Artificial Intelligence Markup Language), IPL (Information Processing Language), Lisp, Smalltalk, Prolog, STRIPS (Stanford Research Institute Problem Solver), Planner, POP-11, Python (the language I am programmed in), Haskell, Wolfram Language, C++ (Cee Plus Plus), and MATLAB (Matrix Laboratory) are the languages used in programming Artificial Intelligence.")
 	elif multifindword(message,"what is Artificial Intelligence?","What is Artificial Intelligence?","what is artificial intelligence?","What is artificial intelligence?",space):
 		print("'Artificial intelligence (AI) is intelligence exhibited by machines. In computer science, an ideal ‘intelligent’ machine is a flexible rational agent that perceives its environment and takes actions that maximize its chance of success at some goal. The term ‘artificial intelligence’ is applied when a machine mimics ‘cognitive’ functions that humans associate with other human minds, such as ‘learning’ and ‘problem solving’.' -- Wikipedia")
